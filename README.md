@@ -7,7 +7,7 @@ Es una aplicación web de comercio electrónico dedicada a la presentación y ve
 Desarrollar una aplicación web moderna, adaptable a distintos dispositivos y organizada en componentes reutilizables, que permita explorar productos artesanales y administrar su información mediante servicios de Firebase.
 
 ## Funcionalidades principales
-- <Inicio:> presentación de la marca y sus características principales.
+- **Inicio:** presentación de la marca y sus características principales.
 - Catálogo de productos: consulta de productos almacenados en Cloud Firestore, búsqueda por nombre y paginación de seis productos por página.
 - Detalle de producto: información ampliada, imagen, precio, selección de cantidad y agregado al carrito.
 - Carrito de compras: agregado, modificación de cantidades, eliminación de productos, vaciado del carrito y cálculo del total.
