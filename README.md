@@ -72,25 +72,20 @@ Los productos actuales se leen desde `public/datos/productos.json`. Cada product
 
 La vista de productos incluye el acceso `+ Nuevo producto`, ubicado junto al listado de “Nuestros Licores”. El enlace utiliza React Router y navega a `/productos/nuevo` sin recargar la aplicación.
 
-## Alta de productos
+## Publicación
+La aplicación se compiló con Vite y se publicó en Netlify.
 
-La funcionalidad está dividida en dos componentes para separar responsabilidades:
-
-- `FormularioProductoContainer.jsx`: estados y lógica.
-- `FormularioProducto.jsx`: formulario y presentación.
-
-Actualmente se capturan:
-
-- nombre
-- descripción corta
-- descripción completa
-- precio
-- stock
-- archivo de imagen
-
-La imagen se selecciona localmente mediante un campo `type="file"`. El formulario utiliza `useState`, `manejarCambio`, `manejarCambioImagen` y `manejarEnvio`; durante el envío también se contempla el estado `cargando`.
-
-Por el momento no se utiliza ImgBB ni otro servicio de almacenamiento remoto. Tampoco hay una API/backend o base de datos implementada. Por este motivo, el botón **Guardar Producto** valida y procesa los datos en React, pero no modifica `productos.json` ni persiste todavía un nuevo producto. La persistencia y la subida remota de imágenes quedan preparadas para una etapa posterior del curso.
+URL de producción: https://alquimialicorera.netlify.app/
+Seguridad y consideraciones
+- La autenticación se gestiona con Firebase Authentication.
+- El acceso al panel administrativo está condicionado al rol del usuario.
+- Las reglas de seguridad de Cloud Firestore deben restringir las escrituras a usuarios autorizados. Las protecciones de interfaz por sí solas no reemplazan las reglas de acceso a la base de datos.
+- Antes de utilizar el sitio en producción de forma permanente, verificar que no permanezcan activas reglas temporales de Firestore con fecha de vencimiento.
+- No se incluyen credenciales privadas ni contraseñas en este documento.
+Estado del proyecto
+Proyecto desarrollado, revisado, compilado y publicado. Las funcionalidades implementadas fueron verificadas manualmente y el sitio se encuentra disponible en Netlify.
+Autoría
+Proyecto desarrollado como trabajo integrador de React JS.
 
 ## Quiénes Somos y Nuestro Equipo
 
