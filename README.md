@@ -1,101 +1,157 @@
-# 🍷 Alquimia Licorera
+Alquimia Licorera
+Alquimia Licorera es una aplicación web de comercio electrónico dedicada a la presentación y venta de licores artesanales. Fue desarrollada con React y Vite e integra Firebase para el almacenamiento de productos y la autenticación de usuarios.
 
-Es una aplicación web de comercio electrónico dedicada a la presentación y venta de licores artesanales. Fue desarrollada como proyecto integrador con React y Vite, e incorpora un catálogo dinámico, detalle de productos, carrito de compras, autenticación de usuarios y un panel de administración para gestionar el catálogo.
+La aplicación permite explorar el catálogo, consultar información detallada de cada producto, gestionar un carrito de compras y, mediante un panel de administración protegido, administrar los productos publicados.
+Aplicación publicada y repositorio
+- Sitio web: https://alquimialicorera.netlify.app/
+- Repositorio: https://github.com/Bagre0823/AlquimiaLicoreraFinal
+Los enlaces corresponden a los utilizados para presentar el proyecto. Si la versión recuperada se publica en otro repositorio, actualizarlos.
 
-## 🌐 Sitio publicado: alquimialicorera.netlify.app
-- Objetivo del proyecto
-Desarrollar una aplicación web moderna, adaptable a distintos dispositivos y organizada en componentes reutilizables, que permita explorar productos artesanales y administrar su información mediante servicios de Firebase.
+Funcionalidades principales
+Para visitantes y clientes
+- Página de inicio con presentación de la marca y sus beneficios.
+- Catálogo de licores artesanales con imágenes, descripciones y precios.
+- Búsqueda y paginación de productos.
+- Vista de detalle de cada producto.
+- Selección de cantidades y agregado de productos al carrito.
+- Carrito con modificación de cantidades, eliminación de productos y cálculo del total.
+- Persistencia del carrito mediante localStorage.
+- Páginas informativas «Quiénes somos» y «Contacto».
+- Formulario de contacto integrado con Formspree.
+- Inicio de sesión, registro y perfil de usuario.
+- Diseño adaptable a computadoras, tabletas y teléfonos.
+Para administración
+- Acceso a un panel de administración mediante autenticación.
+- Listado de productos registrados.
+- Alta, edición y eliminación de productos en Firestore.
+- Gestión de información como nombre, descripción, precio, stock e imagen.
+- Protección de las rutas administrativas desde la aplicación.
+Importante: la protección de rutas en React debe complementarse con reglas de seguridad adecuadas en Firestore. La interfaz por sí sola no protege la base de datos.
 
-## Funcionalidades principales
-- **Inicio:** presentación de la marca y sus características principales.
-- **Catálogo de productos:** consulta de productos almacenados en Cloud Firestore, búsqueda por nombre y paginación de seis productos por página.
-- **Detalle de producto:** información ampliada, imagen, precio, selección de cantidad y agregado al carrito.
-- **Carrito de compras:** agregado, modificación de cantidades, eliminación de productos, vaciado del carrito y cálculo del total.
-- **Persistencia del carrito:** almacenamiento local mediante localStorage.
-- **Autenticación:** registro, inicio y cierre de sesión mediante Firebase Authentication.
-- **Perfil de usuario:** visualización de información de la sesión.
-- **Panel de administración:** acceso protegido según el rol del usuario y operaciones de alta, consulta, modificación y eliminación de productos (CRUD).
-- **Contacto:** formulario de contacto integrado con Formspree y sección de testimonios.
-- **Información institucional:** sección «Quiénes somos» y presentación del equipo.
-- **Diseño responsive:** adaptación a computadoras, tablets y teléfonos móviles.
-- **SEO:** gestión de títulos y metadescripciones mediante React Helmet Async.
+Tecnologías utilizadas
+Tecnología	Uso
+React	Construcción de la interfaz mediante componentes
+Vite	Entorno de desarrollo y herramientas de compilación
+React Router DOM	Navegación entre páginas
+JavaScript y JSX	Lógica y componentes de la aplicación
+CSS y Bootstrap	Estilos y diseño adaptable
+Font Awesome	Iconografía
+Firebase Authentication	Autenticación de usuarios
+Cloud Firestore	Almacenamiento y administración de productos
+Context API	Estado compartido de autenticación y carrito
+SweetAlert2	Mensajes y confirmaciones de la interfaz
+React Helmet Async	Gestión de metadatos de páginas
+Formspree	Recepción de mensajes del formulario de contacto
+pnpm	Administración de dependencias
+Netlify	Publicación de la aplicación
 
-## Tecnologías
-- React	Construcción de interfaces mediante componentes.
-- Vite	Entorno de desarrollo y compilación para producción.
-- JavaScript (JSX)	Lógica e interfaces de la aplicación.
-- React Router DOM	Navegación entre vistas y rutas protegidas.
-- Context API	Gestión global del carrito y de la autenticación.
-- Firebase Authentication	Registro e inicio de sesión de usuarios.
-- Cloud Firestore	Almacenamiento y gestión de productos y datos asociados.
-- Bootstrap	Apoyo para el diseño de la interfaz.
-- CSS personalizado	Estilos, distribución y adaptación responsive.
-- Font Awesome	Iconografía.
-- SweetAlert2	Mensajes y confirmaciones visuales.
-- React Helmet Async	Títulos y metadatos SEO.
-- Formspree	Recepción de mensajes del formulario de contacto.
-- ESLint	Análisis estático del código.
-- pnpm	Gestión de dependencias y ejecución de scripts.
-- Git y GitHub	Control de versiones y alojamiento del código fuente.
-- Netlify	Publicación de la aplicación web.
 
-## Arquitectura general
-  ## El proyecto utiliza una estructura basada en componentes, vistas, contextos y servicios:
-- Componentes reutilizables: navegación, encabezado, pie de página, tarjetas de productos y formularios.
-- Vistas: inicio, productos, detalle, carrito, contacto, información institucional, autenticación y administración.
-- Contextos: estado compartido del carrito y del usuario autenticado.
-- Firebase: configuración de los servicios de autenticación y base de datos.
-- Rutas protegidas: control de acceso a funcionalidades administrativas.
-Los productos se consultan desde Firestore. Algunas secciones informativas utilizan archivos JSON locales disponibles en la carpeta pública.
+Requisitos previos
+Antes de comenzar, es necesario contar con:
+1. Node.js instalado. La versión utilizada durante el desarrollo recuperado fue 24.22.0. Se recomienda comprobar la compatibilidad con la versión indicada en package.json, si existe una propiedad engines.
+2. pnpm, el administrador de paquetes utilizado en el proyecto.
+3. Git, si se va a obtener el código mediante clonación del repositorio.
+4. Un editor de código, por ejemplo Visual Studio Code.
+5. Acceso a un proyecto de Firebase correctamente configurado para utilizar Authentication y Firestore.
+Para comprobar las herramientas instaladas, abrir una terminal y ejecutar:
+node --version
+pnpm --version
+git --version
+Si pnpm no está disponible, puede habilitarse mediante Corepack, cuando esté disponible en la instalación de Node.js, o instalarse siguiendo la documentación oficial: https://pnpm.io/installation
+Instalación y ejecución en un entorno local
+1. Obtener el código fuente
+Clonar el repositorio desde una terminal:
+git clone https://github.com/Bagre0823/AlquimiaLicoreraFinal.git
+Entrar en la carpeta creada:
+cd AlquimiaLicoreraFinal
+También es posible descargar el repositorio como archivo ZIP desde GitHub, descomprimirlo y abrir la carpeta del proyecto en Visual Studio Code.
+Si ya se dispone de una copia recuperada y funcional del proyecto, no es necesario clonar el repositorio ni reemplazar esa carpeta. Basta con abrir la copia existente y continuar desde el paso siguiente.
 
-## Verificaciones y pruebas realizadas
-Durante la revisión final se realizaron pruebas funcionales manuales.
-Pruebas funcionales manuales
-- Se revisó el funcionamiento general de la aplicación, incluyendo:
-- Navegación entre las distintas secciones.
-- Visualización del catálogo y del detalle de productos.
-- Consulta de información desde Firestore.
-- Incorporación de productos al carrito y modificación de cantidades.
-- Registro, inicio y cierre de sesión.
-- Acceso al panel de administración y gestión de productos.
-- Visualización de las secciones institucionales y de contacto.
-- Presentación de la interfaz en computadoras, tablets y teléfonos móviles.
-- Funcionamiento general de la versión publicada en Netlify.
-### Resultado: las verificaciones funcionales finales fueron satisfactorias.
-Nota sobre testing: estas comprobaciones fueron manuales. No se documentan suites automatizadas de pruebas unitarias, de integración o end-to-end porque no formaron parte de las verificaciones realizadas.
+2. Instalar las dependencias
+En la raíz del proyecto, donde se encuentra package.json, ejecutar:
+pnpm install --frozen-lockfile
+Este comando instala las dependencias definidas en pnpm-lock.yaml respetando las versiones registradas. Si la copia del proyecto no contiene un archivo de bloqueo compatible, revisar la situación antes de ejecutar una instalación que pueda cambiar las versiones.
 
-## Productos
+No es necesario copiar la carpeta node_modules de otra computadora: se genera al instalar las dependencias.
+3. Revisar la configuración de Firebase
+La aplicación utiliza Firebase Authentication y Cloud Firestore. Antes de iniciarla, revisar el archivo de configuración de Firebase del proyecto (durante el desarrollo se utilizó src/firebase/config.js) y verificar que esté conectado al proyecto Firebase correcto.
 
-Los productos actuales se leen desde `public/datos/productos.json`. Cada producto utiliza datos como `id`, `nombre`, `descripcion`, `decLarga`, `precio` e `imagen`.
+Los valores habituales de configuración de una aplicación web Firebase incluyen:
+- apiKey
+- authDomain
+- projectId
+- storageBucket
+- messagingSenderId
+- appId
+No reemplazar ni modificar la configuración existente si ya funciona. Si se utiliza un proyecto Firebase diferente, configurar sus valores conforme al código real de la aplicación.
 
-`ItemListContainer` realiza el `fetch`, controla los estados de carga/error y entrega los datos a `ItemList`. Cada `Item` enlaza con `/producto/:id`. `DetalleProducto` usa `useParams()` para obtener el ID y buscar el producto correspondiente.
+Además, comprobar en la consola de Firebase que:
+- Authentication tenga habilitados los métodos de acceso que utiliza la aplicación.
+- Firestore contenga la colección de productos necesaria para mostrar el catálogo.
+- Las reglas de seguridad de Firestore permitan las operaciones autorizadas y restrinjan las modificaciones administrativas.
+- Exista un usuario con los permisos administrativos requeridos si se necesita probar el panel de administración.
+La configuración web de Firebase no sustituye a las reglas de seguridad. No publicar contraseñas, cuentas de servicio ni claves privadas en el repositorio. Si el proyecto utiliza archivos .env, se deben configurar localmente de acuerdo con las variables que realmente consuma el código; no se presupone aquí ningún nombre de variable.
 
-La vista de productos incluye el acceso `+ Nuevo producto`, ubicado junto al listado de “Nuestros Licores”. El enlace utiliza React Router y navega a `/productos/nuevo` sin recargar la aplicación.
+4. Iniciar el servidor de desarrollo
+Ejecutar:
+pnpm dev
+Si el servidor se inicia correctamente, Vite mostrará un mensaje similar a:
+VITE v7.x.x ready
+➜ Local: http://localhost:5173/
+Abrir en el navegador:
 
-## Publicación
-La aplicación se compiló con Vite y se publicó en Netlify.
+http://localhost:5173/
 
-URL de producción: https://alquimialicorera.netlify.app/
+Mantener abierta la terminal mientras se utiliza la aplicación. Para detener el servidor, presionar Ctrl + C.
+Si el puerto 5173 está ocupado, Vite puede utilizar otro. En ese caso, abrir la dirección exacta indicada por la terminal.
+
+Comprobaciones de funcionamiento
+Una vez iniciada la aplicación, se recomienda verificar manualmente:
+1. Que la página de inicio y el menú de navegación se muestren correctamente.
+2. Que el catálogo cargue los productos desde Firestore, con sus imágenes y precios.
+3. Que la búsqueda, la paginación y los enlaces a los detalles funcionen.
+4. Que puedan agregarse productos al carrito y modificarse sus cantidades.
+5. Que el total del carrito se actualice y que el carrito conserve su contenido al recargar la página.
+6. Que el formulario de contacto muestre las validaciones y respuestas esperadas.
+7. Que el inicio y cierre de sesión funcionen.
+8. Que un usuario sin permisos no pueda acceder a las funciones administrativas.
+9. Que un usuario administrador autorizado pueda crear, editar y eliminar productos.
+10. Que la interfaz se adapte correctamente a distintos tamaños de pantalla.
+Estructura general del proyecto
+La organización se basa en componentes reutilizables y páginas de React. Entre las áreas principales se encuentran:
+AlquimiaLicorera/
+├── public/                  # Archivos e imágenes públicas
+├── src/
+│   ├── components/          # Componentes reutilizables y layout
+│   ├── context/             # Contextos de carrito y autenticación
+│   ├── firebase/            # Configuración de Firebase
+│   ├── pages/               # Vistas de la aplicación
+│   ├── App.jsx              # Configuración principal de la aplicación
+│   └── main.jsx             # Punto de entrada de React
+├── index.html
+├── package.json
+├── pnpm-lock.yaml
+└── vite.config.js
+Estructura orientativa basada en el desarrollo del proyecto. Los nombres exactos de algunas carpetas o archivos pueden variar en la versión recuperada.
+
+Solución de problemas frecuentes
+vite no se reconoce como comando
+Comprobar que se está trabajando en la carpeta que contiene package.json y que las dependencias se instalaron correctamente mediante pnpm install --frozen-lockfile.
+ERR_MODULE_NOT_FOUND para rollup u otra dependencia
+El error puede indicar una instalación incompleta o un problema de resolución dentro de node_modules. Antes de modificar archivos o borrar dependencias, conservar una copia del proyecto y revisar el mensaje completo. Una reinstalación respetando el archivo de bloqueo puede resolver algunos casos, pero no debe hacerse a ciegas sobre la única copia disponible.
+La página se abre en blanco
+Abrir las herramientas de desarrollo del navegador (F12 → Console) y revisar los errores de JavaScript. Verificar también los mensajes de la terminal de Vite. Una pantalla en blanco no permite identificar por sí sola la causa.
+Los productos no aparecen
+Revisar la conexión a Firebase, la colección de Firestore, los permisos de lectura y las rutas de las imágenes.
+Error de autenticación
+Comprobar la configuración de Firebase Authentication, los métodos de inicio de sesión habilitados y los mensajes de error de la consola.
 Seguridad y consideraciones
-- La autenticación se gestiona con Firebase Authentication.
-- El acceso al panel administrativo está condicionado al rol del usuario.
-- Las reglas de seguridad de Cloud Firestore deben restringir las escrituras a usuarios autorizados. Las protecciones de interfaz por sí solas no reemplazan las reglas de acceso a la base de datos.
-- Antes de utilizar el sitio en producción de forma permanente, verificar que no permanezcan activas reglas temporales de Firestore con fecha de vencimiento.
-- No se incluyen credenciales privadas ni contraseñas en este documento.
-
-## Estado del proyecto
-Proyecto desarrollado, revisado, compilado y publicado. Las funcionalidades implementadas fueron verificadas manualmente y el sitio se encuentra disponible en Netlify.
-
-## Autoría
-Proyecto desarrollado como trabajo integrador de React JS.
-
-## Quiénes Somos y Nuestro Equipo
-
-La página `/quienes-somos` contiene la presentación de Alquimia Licorera y la sección “Nuestro equipo”. `PersonasContainer` fue trasladado desde el Footer a esta página y reutiliza los datos de `Personas.json`.
-
-El Footer queda reservado para canales de atención, newsletter, redes sociales, QR y copyright.
-
-## Diseño
-
-Los estilos se organizan principalmente por componente. `FormularioProducto.css` presenta el alta como una tarjeta centrada, con campos alineados verticalmente, estados de foco y botón consistente con el resto de la interfaz. Se reutilizan clases visuales comunes cuando corresponde para evitar CSS duplicado. Las vistas de detalle, equipo y formulario incluyen comportamiento responsive para pantallas pequeñas.
+- Mantener reglas de Firestore que permitan únicamente las operaciones correspondientes a cada usuario o rol.
+- No utilizar reglas temporales abiertas en un entorno publicado.
+- No subir credenciales privadas ni archivos con secretos a GitHub.
+- Validar los datos de los formularios y las operaciones de administración.
+- Conservar una copia de seguridad del código antes de realizar cambios importantes en dependencias, configuración o repositorios.
+Estado del proyecto
+Aplicación desarrollada como proyecto de comercio electrónico con catálogo, carrito, autenticación y administración de productos. La finalización de una compra mediante un proceso de pago completo no forma parte del alcance implementado que se describe aquí.
+Alquimia Licorera — Licores artesanales
 
