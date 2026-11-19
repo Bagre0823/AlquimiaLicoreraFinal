@@ -1,0 +1,94 @@
+.header-wrapper {
+    width: 100%;
+    background-color: #F8F4F4;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Contenedor del logo y navbar */
+.header-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 8px 80px;
+}
+
+/* -------------------- */
+/* LOGO                 */
+/* -------------------- */
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo img {
+    width: 220px;
+    height: auto;
+    display: block;
+}
+
+/* -------------------- */
+/* NAVBAR               */
+/* -------------------- */
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* -------------------- */
+/* LINEA INFERIOR       */
+/* -------------------- */
+
+.header-wrapper hr {
+    margin: 2px 0 0 0;
+    border: 0;
+    border-top: 2px solid #a8a7a7;
+}
+
+/* -------------------- */
+/* RESPONSIVE           */
+/* -------------------- */
+
+@media (max-width: 1100px) {
+
+    .header-contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px;
+    }
+
+    .header-logo img {
+        width: 180px;
+    }
+
+    .header-nav {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header-contenedor {
+        padding: 8px 15px;
+    }
+
+    .header-logo img {
+        width: 150px;
+    }
+}

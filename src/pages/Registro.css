@@ -1,0 +1,135 @@
+
+/* ================= REGISTRO ================= */
+
+.registro {
+    width: 100%;
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 35px;
+
+    background-color: #F8F4F4;
+    border: 1px solid #e5dddd;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+/* TITULO */
+
+.registro h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #4b3b3b;
+}
+
+/* FORMULARIO */
+
+.registro form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.registro form div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+/* ETIQUETAS */
+
+.registro label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4b3b3b;
+}
+
+/* CAMPOS */
+
+.registro input {
+    width: 100%;
+    padding: 11px 12px;
+
+    border: 1px solid #d6cccc;
+    border-radius: 6px;
+    background-color: white;
+
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.registro input:focus {
+    outline: none;
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 2px rgba(128, 102, 102, 0.12);
+}
+
+/* BOTON REGISTRARSE */
+
+.registro form button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    align-self: center;
+
+    padding: 10px 18px;
+
+    background-color: var(--color-principal);
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.registro form button:hover {
+    opacity: 0.85;
+}
+
+.registro form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ENLACE A LOGIN */
+
+.registro p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #665050;
+}
+
+.registro p a {
+    color: var(--color-principal);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.registro p a:hover {
+    text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 480px) {
+
+    .registro {
+        width: calc(100% - 32px);
+        margin: 25px auto;
+        padding: 25px 20px;
+    }
+
+    .registro h2 {
+        font-size: 23px;
+    }
+}

@@ -1,0 +1,254 @@
+/* ================= ADMINISTRACIÓN DE PRODUCTOS ================= */
+
+.admin-productos {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+/* ================= TÍTULO ================= */
+
+.admin-productos h1 {
+    text-align: center;
+    margin: 0 0 15px;
+}
+
+/* ================= DESCRIPCIÓN ================= */
+
+.admin-productos>p {
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+/* ================= ACCIONES ================= */
+
+.admin-acciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+
+/* ================= BOTÓN AGREGAR PRODUCTO ================= */
+
+.admin-acciones .admin-boton {
+    display: inline-block;
+
+    width: auto;
+    height: auto;
+    flex: 0 0 auto;
+
+    padding: 8px 15px;
+    margin-top: 10px;
+
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+
+    border: 1px solid var(--color-principal);
+    border-radius: 6px;
+
+    background-color: transparent;
+    color: var(--color-principal);
+
+    transition: 0.3s;
+}
+
+.admin-acciones .admin-boton:hover {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+
+.admin-acciones .admin-boton:hover {
+    opacity: 0.85;
+}
+
+/* ================= LISTADO ADMINISTRATIVO ================= */
+
+.admin-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    margin-top: 10px;
+}
+
+.admin-lista h2 {
+    text-align: left;
+    margin: 0 0 20px;
+}
+
+/* ================= TARJETA DE PRODUCTO ================= */
+
+.admin-producto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 25px;
+
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    background-color: #F8F4F4;
+}
+
+/* ================= IMAGEN ================= */
+
+.admin-producto img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+
+    border-radius: 6px;
+}
+
+/* ================= INFORMACIÓN ================= */
+
+.admin-producto-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-producto-info h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.admin-producto-info p {
+    text-align: left;
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+
+
+
+/* ================= ACCIONES DE PRODUCTOS ================= */
+
+.admin-producto-acciones {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+/* ================= ICONOS EDITAR Y ELIMINAR ================= */
+
+.admin-boton-editar,
+.admin-boton-eliminar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    font-size: 20px;
+    line-height: 1;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+/* ================= EDITAR ================= */
+
+.admin-boton-editar {
+    color: var(--color-principal);
+}
+
+/* ================= ELIMINAR ================= */
+
+.admin-boton-eliminar {
+    color: #b83b3b;
+}
+
+/* ================= TAMAÑO DE ICONOS ================= */
+
+.admin-boton-editar i,
+.admin-boton-eliminar i {
+    font-size: 20px;
+}
+
+/* ================= EFECTO HOVER ================= */
+
+.admin-boton-editar:hover,
+.admin-boton-eliminar:hover {
+    background: transparent;
+    color: inherit;
+    opacity: 0.7;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .admin-producto {
+        flex-wrap: wrap;
+    }
+
+    .admin-producto-acciones {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .admin-productos {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .admin-acciones {
+        justify-content: center;
+    }
+
+    .admin-producto {
+        gap: 15px;
+        padding: 12px;
+    }
+
+    .admin-producto img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .admin-producto-info h3 {
+        font-size: 18px;
+    }
+
+    .admin-producto-info p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,198 @@
+
+/* ================= DETALLE PRODUCTO ================= */
+
+.detalle-producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 20px;
+}
+
+/* ================= IMAGEN ================= */
+
+.detalle-producto img {
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+    border-radius: 10px;
+
+    flex-shrink: 0;
+}
+
+/* ================= INFORMACION ================= */
+
+.detalle-producto-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    max-width: 550px;
+    min-width: 0;
+
+    text-align: left;
+}
+
+/* TITULO */
+
+.detalle-producto-info h2 {
+    font-size: 26px;
+    margin: 0 0 10px;
+}
+
+/* DESCRIPCION */
+
+.detalle-producto-info p {
+    font-size: 16px;
+    line-height: 1.6;
+
+    max-width: 550px;
+    margin: 0 0 12px;
+}
+
+/* PRECIO */
+
+.detalle-producto-info h3 {
+    font-size: 20px;
+    margin: 5px 0 15px;
+}
+
+/* ================= COMPRA ================= */
+
+.detalle-compra {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 12px;
+    margin: 10px 0 15px;
+}
+
+/* ================= CONTADOR ================= */
+
+.detalle-contador {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+    margin: 0;
+}
+
+.detalle-contador button {
+    width: 26px;
+    height: 28px;
+    padding: 0;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: var(--color-principal);
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.detalle-contador button:hover {
+    opacity: 0.8;
+}
+
+.detalle-contador span {
+    min-width: 16px;
+
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ================= AGREGAR AL CARRITO ================= */
+
+.detalle-boton-agregar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    width: auto;
+    padding: 7px 12px;
+    margin: 0;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: var(--color-principal);
+    color: white;
+
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.detalle-boton-agregar:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.detalle-boton-agregar:active {
+    transform: translateY(0);
+}
+
+/* ================= VOLVER A PRODUCTOS ================= */
+
+.detalle-producto-info .boton-link {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .detalle-producto {
+        flex-direction: column;
+
+        gap: 20px;
+
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .detalle-producto img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .detalle-producto-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .detalle-producto-info p {
+        max-width: 90%;
+    }
+
+    .detalle-compra {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .detalle-compra {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+}

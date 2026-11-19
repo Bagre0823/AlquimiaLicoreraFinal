@@ -1,0 +1,264 @@
+/* ================= CARRITO ================= */
+
+.carrito {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.carrito h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: var(--color-principal);
+}
+
+/* ================= PRODUCTO ================= */
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  padding: 18px;
+  margin-bottom: 15px;
+
+  background-color: #F8F4F4;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.carrito-item img {
+  width: 90px;
+  height: 90px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+/* ================= INFORMACIÓN ================= */
+
+.carrito-info {
+  flex: 1;
+}
+
+.carrito-info h4 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  color: var(--color-principal);
+}
+
+.carrito-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* ================= CANTIDAD ================= */
+
+.carrito-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 10px 0;
+}
+
+.carrito-cantidad button {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: var(--color-principal);
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.carrito-cantidad button:hover {
+  opacity: 0.8;
+}
+
+.carrito-cantidad span {
+  min-width: 20px;
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ================= TOTAL ================= */
+
+.carrito-total {
+  margin-top: 25px;
+  padding-top: 20px;
+
+  border-top: 1px solid #ccc;
+
+  text-align: right;
+}
+
+.carrito-total h3 {
+  margin-bottom: 15px;
+
+  font-size: 22px;
+  color: var(--color-principal);
+}
+
+/* ================= BOTÓN VACIAR ================= */
+
+.boton-vaciar {
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: var(--color-principal);
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: opacity 0.3s ease;
+}
+
+.boton-vaciar:hover {
+  opacity: 0.8;
+}
+
+/* ================= CARRITO VACÍO ================= */
+
+.carrito-vacio {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.carrito-vacio h1 {
+  margin-bottom: 10px;
+
+  color: var(--color-principal);
+}
+
+.carrito-vacio p {
+  font-size: 15px;
+  color: #666;
+}
+
+
+/* BOTÓN VOLVER A PRODUCTOS */
+
+.boton-volver {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--color-principal);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.boton-volver:hover {
+  opacity: 0.85;
+}
+
+
+/* ================= ELIMINAR PRODUCTO ================= */
+
+.boton-eliminar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: auto;
+  height: 30px;
+  padding: 0 12px;
+  margin-top: 10px;
+
+  background-color: #b83b3b;
+  color: white;
+
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: opacity 0.3s;
+}
+
+.boton-eliminar i {
+  font-size: 15px;
+}
+
+.boton-eliminar:hover {
+  background-color: var(--color-principal);
+  color: white;
+  opacity: 0.8;
+}
+
+
+/* FINALIZAR COMPRA */
+
+.boton-finalizar {
+  margin-left: 12px;
+  padding: 10px 20px;
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.boton-finalizar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+  .carrito {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .carrito-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carrito-item img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .carrito-cantidad {
+    justify-content: center;
+  }
+
+  .carrito-total {
+    text-align: center;
+  }
+}

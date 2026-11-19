@@ -1,0 +1,129 @@
+/* ItemList.css */
+
+.productos {
+    padding: 40px 20px;
+    text-align: center;
+}
+ 
+.productos h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+ 
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.productos-acciones {
+    display: flex;
+    justify-content: center;
+
+    margin: 10px 0 25px;
+}
+
+
+/* ================= BARRA DE BÚSQUEDA ================= */
+
+.productos-busqueda {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    max-width: 420px;
+
+    margin: 0 auto 25px;
+    padding: 0 12px;
+
+    border: 1px solid #d8d7d7;
+    border-radius: 8px;
+    background-color: #fff;
+
+    box-sizing: border-box;
+}
+
+/* ICONO DE BÚSQUEDA */
+
+.productos-busqueda i {
+    color: var(--color-principal);
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+/* CAMPO DE BÚSQUEDA */
+
+.productos-busqueda input {
+    width: 100%;
+    padding: 12px 0;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-size: 14px;
+    color: #333;
+}
+
+/* EFECTO AL SELECCIONAR */
+
+.productos-busqueda:focus-within {
+    border-color: var(--color-principal);
+}
+
+/* SIN RESULTADOS */
+
+.productos-sin-resultados {
+    margin: 30px 0;
+    font-size: 15px;
+    color: #777;
+}
+
+
+/* ================= PAGINACIÓN ================= */
+
+.productos-paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.productos-paginacion button {
+    padding: 8px 18px;
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.productos-paginacion button:hover:not(:disabled) {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+.productos-paginacion button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.productos-paginacion span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 480px) {
+    .productos-busqueda {
+        max-width: 100%;
+    }
+}
