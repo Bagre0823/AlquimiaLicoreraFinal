@@ -51,8 +51,8 @@ Los productos se consultan desde Firestore. Algunas secciones informativas utili
 ## Verificaciones y pruebas realizadas
 Durante la revisión final se realizaron pruebas funcionales manuales.
 Pruebas funcionales manuales
-Se revisó el funcionamiento general de la aplicación, incluyendo:
-  -- Navegación entre las distintas secciones.
+### Se revisó el funcionamiento general de la aplicación, incluyendo:
+- Navegación entre las distintas secciones.
 - Visualización del catálogo y del detalle de productos.
 - Consulta de información desde Firestore.
 - Incorporación de productos al carrito y modificación de cantidades.
