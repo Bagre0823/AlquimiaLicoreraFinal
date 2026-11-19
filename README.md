@@ -40,7 +40,7 @@ Desarrollar una aplicación web moderna, adaptable a distintos dispositivos y or
 - Netlify	Publicación de la aplicación web.
 
 ## Arquitectura general
-# El proyecto utiliza una estructura basada en componentes, vistas, contextos y servicios:
+  ## El proyecto utiliza una estructura basada en componentes, vistas, contextos y servicios:
 - Componentes reutilizables: navegación, encabezado, pie de página, tarjetas de productos y formularios.
 - Vistas: inicio, productos, detalle, carrito, contacto, información institucional, autenticación y administración.
 - Contextos: estado compartido del carrito y del usuario autenticado.
