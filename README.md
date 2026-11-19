@@ -8,17 +8,17 @@ Desarrollar una aplicación web moderna, adaptable a distintos dispositivos y or
 
 ## Funcionalidades principales
 - **Inicio:** presentación de la marca y sus características principales.
-- Catálogo de productos: consulta de productos almacenados en Cloud Firestore, búsqueda por nombre y paginación de seis productos por página.
-- Detalle de producto: información ampliada, imagen, precio, selección de cantidad y agregado al carrito.
-- Carrito de compras: agregado, modificación de cantidades, eliminación de productos, vaciado del carrito y cálculo del total.
-- Persistencia del carrito: almacenamiento local mediante localStorage.
-- Autenticación: registro, inicio y cierre de sesión mediante Firebase Authentication.
-- Perfil de usuario: visualización de información de la sesión.
-- Panel de administración: acceso protegido según el rol del usuario y operaciones de alta, consulta, modificación y eliminación de productos (CRUD).
-- Contacto: formulario de contacto integrado con Formspree y sección de testimonios.
-- Información institucional: sección «Quiénes somos» y presentación del equipo.
-- Diseño responsive: adaptación a computadoras, tablets y teléfonos móviles.
-- SEO: gestión de títulos y metadescripciones mediante React Helmet Async.
+- **Catálogo de productos:** consulta de productos almacenados en Cloud Firestore, búsqueda por nombre y paginación de seis productos por página.
+- **Detalle de producto:** información ampliada, imagen, precio, selección de cantidad y agregado al carrito.
+- **Carrito de compras:** agregado, modificación de cantidades, eliminación de productos, vaciado del carrito y cálculo del total.
+- **Persistencia del carrito:** almacenamiento local mediante localStorage.
+- **Autenticación:** registro, inicio y cierre de sesión mediante Firebase Authentication.
+- **Perfil de usuario:** visualización de información de la sesión.
+- **Panel de administración:** acceso protegido según el rol del usuario y operaciones de alta, consulta, modificación y eliminación de productos (CRUD).
+- **Contacto:** formulario de contacto integrado con Formspree y sección de testimonios.
+- **Información institucional:** sección «Quiénes somos» y presentación del equipo.
+- **Diseño responsive:** adaptación a computadoras, tablets y teléfonos móviles.
+- **SEO:** gestión de títulos y metadescripciones mediante React Helmet Async.
 
 ## Tecnologías
 - React	Construcción de interfaces mediante componentes.
