@@ -1,4 +1,4 @@
-# Alquimia Licorera
+# 🍷 Alquimia Licorera
 
 es una aplicación web de comercio electrónico dedicada a la presentación y venta de licores artesanales. Fue desarrollada como proyecto integrador con React y Vite, e incorpora un catálogo dinámico, detalle de productos, carrito de compras, autenticación de usuarios y un panel de administración para gestionar el catálogo.
 
@@ -21,36 +21,32 @@ Desarrollar una aplicación web moderna, adaptable a distintos dispositivos y or
 - SEO: gestión de títulos y metadescripciones mediante React Helmet Async.
 
 ## Tecnologías
+- React	Construcción de interfaces mediante componentes.
+- Vite	Entorno de desarrollo y compilación para producción.
+- JavaScript (JSX)	Lógica e interfaces de la aplicación.
+- React Router DOM	Navegación entre vistas y rutas protegidas.
+- Context API	Gestión global del carrito y de la autenticación.
+- Firebase Authentication	Registro e inicio de sesión de usuarios.
+- Cloud Firestore	Almacenamiento y gestión de productos y datos asociados.
+- Bootstrap	Apoyo para el diseño de la interfaz.
+- CSS personalizado	Estilos, distribución y adaptación responsive.
+- Font Awesome	Iconografía.
+- SweetAlert2	Mensajes y confirmaciones visuales.
+- React Helmet Async	Títulos y metadatos SEO.
+- Formspree	Recepción de mensajes del formulario de contacto.
+- ESLint	Análisis estático del código.
+- pnpm	Gestión de dependencias y ejecución de scripts.
+- Git y GitHub	Control de versiones y alojamiento del código fuente.
+- Netlify	Publicación de la aplicación web.
 
-- React 19
-- Vite 8
-- React Router DOM 7
-- CSS
-- JSON local para productos, personas y testimonios
-- Formspree para formularios
-- Font Awesome para iconos
-- Google Fonts (Montserrat)
-
-## Instalación
-
-Requiere Node.js y pnpm.
-
-```bash
-pnpm install
-pnpm dev
-```
-
-Para generar la versión de producción:
-
-```bash
-pnpm build
-```
-
-Para revisar el código con ESLint:
-
-```bash
-pnpm lint
-```
+## Arquitectura general
+# El proyecto utiliza una estructura basada en componentes, vistas, contextos y servicios:
+- Componentes reutilizables: navegación, encabezado, pie de página, tarjetas de productos y formularios.
+- Vistas: inicio, productos, detalle, carrito, contacto, información institucional, autenticación y administración.
+- Contextos: estado compartido del carrito y del usuario autenticado.
+- Firebase: configuración de los servicios de autenticación y base de datos.
+- Rutas protegidas: control de acceso a funcionalidades administrativas.
+Los productos se consultan desde Firestore. Algunas secciones informativas utilizan archivos JSON locales disponibles en la carpeta pública.
 
 ## Estructura principal
 
