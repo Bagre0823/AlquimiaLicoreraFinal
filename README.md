@@ -51,7 +51,7 @@ Los productos se consultan desde Firestore. Algunas secciones informativas utili
 ## Verificaciones y pruebas realizadas
 Durante la revisión final se realizaron pruebas funcionales manuales.
 Pruebas funcionales manuales
-### Se revisó el funcionamiento general de la aplicación, incluyendo:
+- Se revisó el funcionamiento general de la aplicación, incluyendo:
 - Navegación entre las distintas secciones.
 - Visualización del catálogo y del detalle de productos.
 - Consulta de información desde Firestore.
@@ -61,7 +61,7 @@ Pruebas funcionales manuales
 - Visualización de las secciones institucionales y de contacto.
 - Presentación de la interfaz en computadoras, tablets y teléfonos móviles.
 - Funcionamiento general de la versión publicada en Netlify.
-Resultado: las verificaciones funcionales finales fueron satisfactorias.
+### Resultado: las verificaciones funcionales finales fueron satisfactorias.
 Nota sobre testing: estas comprobaciones fueron manuales. No se documentan suites automatizadas de pruebas unitarias, de integración o end-to-end porque no formaron parte de las verificaciones realizadas.
 
 ## Productos
