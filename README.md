@@ -48,52 +48,21 @@ Desarrollar una aplicación web moderna, adaptable a distintos dispositivos y or
 - Rutas protegidas: control de acceso a funcionalidades administrativas.
 Los productos se consultan desde Firestore. Algunas secciones informativas utilizan archivos JSON locales disponibles en la carpeta pública.
 
-## Estructura principal
-
-```text
-AlquimiaLicorera/
-├── public/
-│   ├── datos/
-│   │   ├── productos.json
-│   │   ├── Personas.json
-│   │   └── testimonios.json
-│   └── img/
-├── src/
-│   ├── components/
-│   │   ├── beneficios/
-│   │   ├── contacto/
-│   │   ├── hero/
-│   │   ├── layout/
-│   │   │   ├── footer/
-│   │   │   ├── header/
-│   │   │   └── navbar/
-│   │   ├── personas/
-│   │   ├── quienesSomos/
-│   │   └── productos/
-│   │       ├── DetalleProducto.jsx
-│   │       ├── FormularioProducto.jsx
-│   │       ├── FormularioProductoContainer.jsx
-│   │       ├── Item.jsx
-│   │       ├── ItemList.jsx
-│   │       ├── ItemListContainer.jsx
-│   │       └── Productos.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── package.json
-└── vite.config.js
-```
-
-## Rutas
-
-| Ruta | Contenido |
-|---|---|
-| `/` | Inicio / Hero |
-| `/quienes-somos` | Presentación de la marca y Nuestro Equipo |
-| `/productos` | Beneficios y catálogo de licores |
-| `/producto/:id` | Detalle del producto seleccionado |
-| `/productos/nuevo` | Formulario de alta de producto |
-| `/contacto` | Formulario de contacto y testimonios |
+## Verificaciones y pruebas realizadas
+Durante la revisión final se realizaron pruebas funcionales manuales.
+Pruebas funcionales manuales
+Se revisó el funcionamiento general de la aplicación, incluyendo:
+-- Navegación entre las distintas secciones.
+- Visualización del catálogo y del detalle de productos.
+- Consulta de información desde Firestore.
+- Incorporación de productos al carrito y modificación de cantidades.
+- Registro, inicio y cierre de sesión.
+- Acceso al panel de administración y gestión de productos.
+- Visualización de las secciones institucionales y de contacto.
+- Presentación de la interfaz en computadoras, tablets y teléfonos móviles.
+- Funcionamiento general de la versión publicada en Netlify.
+Resultado: las verificaciones funcionales finales fueron satisfactorias.
+Nota sobre testing: estas comprobaciones fueron manuales. No se documentan suites automatizadas de pruebas unitarias, de integración o end-to-end porque no formaron parte de las verificaciones realizadas.
 
 ## Productos
 
