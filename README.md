@@ -82,9 +82,11 @@ Seguridad y consideraciones
 - Las reglas de seguridad de Cloud Firestore deben restringir las escrituras a usuarios autorizados. Las protecciones de interfaz por sí solas no reemplazan las reglas de acceso a la base de datos.
 - Antes de utilizar el sitio en producción de forma permanente, verificar que no permanezcan activas reglas temporales de Firestore con fecha de vencimiento.
 - No se incluyen credenciales privadas ni contraseñas en este documento.
-Estado del proyecto
+
+## Estado del proyecto
 Proyecto desarrollado, revisado, compilado y publicado. Las funcionalidades implementadas fueron verificadas manualmente y el sitio se encuentra disponible en Netlify.
-Autoría
+
+## Autoría
 Proyecto desarrollado como trabajo integrador de React JS.
 
 ## Quiénes Somos y Nuestro Equipo
@@ -97,27 +99,3 @@ El Footer queda reservado para canales de atención, newsletter, redes sociales,
 
 Los estilos se organizan principalmente por componente. `FormularioProducto.css` presenta el alta como una tarjeta centrada, con campos alineados verticalmente, estados de foco y botón consistente con el resto de la interfaz. Se reutilizan clases visuales comunes cuando corresponde para evitar CSS duplicado. Las vistas de detalle, equipo y formulario incluyen comportamiento responsive para pantallas pequeñas.
 
-## Datos locales
-
-- `productos.json`: catálogo y descripciones de productos.
-- `testimonios.json`: testimonios mostrados en Contacto.
-- `Personas.json`: integrantes mostrados en Quiénes Somos.
-
-## Últimos cambios
-
-- Se agregó el botón `+ Nuevo producto` al listado de “Nuestros Licores”.
-- Se incorporó la ruta `/productos/nuevo`.
-- Se implementaron `FormularioProducto.jsx` y `FormularioProductoContainer.jsx`, separando presentación y lógica.
-- Se agregaron descripción corta, descripción completa (`decLarga`), precio, stock e imagen al formulario.
-- Se corrigió el manejo de `decLarga` como campo controlado para permitir ingresar la descripción completa.
-- Se agregó `FormularioProducto.css` con diseño responsive y consistente con el resto del sitio.
-- El alta queda funcional a nivel de captura y validación; la persistencia permanece pendiente hasta incorporar backend/base de datos y, posteriormente, almacenamiento remoto de imágenes.
-
-## Estado actual / pendientes
-
-- Conectar el alta de productos con una API/backend y base de datos.
-- Incorporar almacenamiento remoto de imágenes cuando se implemente esa etapa del curso.
-- Definir si el stock se mostrará también en el catálogo o quedará como dato administrativo.
-- Agregar edición y eliminación de productos si el proyecto evoluciona hacia una administración completa.
-- Evaluar si el contador de cada producto tendrá función de compra/carrito o si se eliminará.
-- Reemplazar datos de contacto y correos de ejemplo antes de una publicación definitiva.
