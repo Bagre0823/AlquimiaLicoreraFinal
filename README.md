@@ -1,6 +1,24 @@
 # Alquimia Licorera
 
-Proyecto frontend realizado con React + Vite para presentar una marca de licores artesanales. Incluye inicio, catálogo, detalle individual de productos, sección Quiénes Somos con equipo, contacto con testimonios y una primera etapa del formulario de alta de productos.
+es una aplicación web de comercio electrónico dedicada a la presentación y venta de licores artesanales. Fue desarrollada como proyecto integrador con React y Vite, e incorpora un catálogo dinámico, detalle de productos, carrito de compras, autenticación de usuarios y un panel de administración para gestionar el catálogo.
+
+## 🌐 Sitio publicado: alquimialicorera.netlify.app
+- Objetivo del proyecto
+Desarrollar una aplicación web moderna, adaptable a distintos dispositivos y organizada en componentes reutilizables, que permita explorar productos artesanales y administrar su información mediante servicios de Firebase.
+
+## Funcionalidades principales
+- Inicio: presentación de la marca y sus características principales.
+- Catálogo de productos: consulta de productos almacenados en Cloud Firestore, búsqueda por nombre y paginación de seis productos por página.
+- Detalle de producto: información ampliada, imagen, precio, selección de cantidad y agregado al carrito.
+- Carrito de compras: agregado, modificación de cantidades, eliminación de productos, vaciado del carrito y cálculo del total.
+- Persistencia del carrito: almacenamiento local mediante localStorage.
+- Autenticación: registro, inicio y cierre de sesión mediante Firebase Authentication.
+- Perfil de usuario: visualización de información de la sesión.
+- Panel de administración: acceso protegido según el rol del usuario y operaciones de alta, consulta, modificación y eliminación de productos (CRUD).
+- Contacto: formulario de contacto integrado con Formspree y sección de testimonios.
+- Información institucional: sección «Quiénes somos» y presentación del equipo.
+- Diseño responsive: adaptación a computadoras, tablets y teléfonos móviles.
+- SEO: gestión de títulos y metadescripciones mediante React Helmet Async.
 
 ## Tecnologías
 
